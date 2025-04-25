@@ -28,11 +28,18 @@
           <a href="./index.html" class="logo"
             >Web<span class="logo1">Studio</span></a
           >
+          <button type="button" class="header-menu-btn">
+            <svg class="header-menu-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-menu"></use>
+            </svg>
+          </button>
           <ul class="menu">
             <li class="menu-element">
               <a href="./index.html" class="link">Studio</a>
             </li>
-            <li class="menu-element"><a href="" class="link">Portfolio</a></li>
+            <li class="menu-element">
+              <a href="" class="link">Portfolio</a>
+            </li>
             <li class="menu-element"><a href="" class="link">Contacts</a></li>
           </ul>
         </nav>
@@ -132,6 +139,10 @@
           <ul class="list">
             <li class="team">
               <img
+                srcset="
+                  ./images/mark-guerrero.jpg    1x,
+                  ./images/mark-guerrero@2x.jpg 2x
+                "
                 src="./images/mark-guerrero.jpg"
                 alt="Mark Guerrero"
                 width="264"
@@ -190,6 +201,7 @@
             </li>
             <li class="team">
               <img
+                srcset="./images/tom-ford.jpg 1x, ./images/tom-ford@2x.jpg 2x"
                 src="./images/tom-ford.jpg"
                 alt="Tom Ford"
                 width="264"
@@ -248,6 +260,10 @@
             </li>
             <li class="team">
               <img
+                srcset="
+                  ./images/camila-garcia.jpg    1x,
+                  ./images/camila-garcia@2x.jpg 2x
+                "
                 src="./images/camila-garcia.jpg"
                 alt="Camila Garcia"
                 width="264"
@@ -312,6 +328,10 @@
             </li>
             <li class="team">
               <img
+                srcset="
+                  ./images/daniel-wilson.jpg    1x,
+                  ./images/daniel-wilson@2x.jpg 2x
+                "
                 src="./images/daniel-wilson.jpg"
                 alt="Daniel Wilson"
                 width="264"
@@ -386,6 +406,10 @@
             <li class="portfolio-element">
               <div class="overlay">
                 <img
+                  srcset="
+                    ./images/banking-app.jpg    1x,
+                    ./images/banking-app@2x.jpg 2x
+                  "
                   src="./images/banking-app.jpg"
                   alt="Banking App"
                   width="360"
@@ -405,6 +429,10 @@
             <li class="portfolio-element">
               <div class="overlay">
                 <img
+                  srcset="
+                    ./images/cashless-payment.jpg    1x,
+                    ./images/cashless-payment@2x.jpg 2x
+                  "
                   src="./images/cashless-payment.jpg"
                   alt="Cashless Payment"
                   width="360"
@@ -424,6 +452,10 @@
             <li class="portfolio-element">
               <div class="overlay">
                 <img
+                  srcset="
+                    ./images/meditation-app.jpg    1x,
+                    ./images/meditation-app@2x.jpg 2x
+                  "
                   src="./images/meditation-app.jpg"
                   alt="Laptop and Phone"
                   width="360"
@@ -443,6 +475,10 @@
             <li class="portfolio-element">
               <div class="overlay">
                 <img
+                  srcset="
+                    ./images/taxi-service.jpg    1x,
+                    ./images/taxi-service@2x.jpg 2x
+                  "
                   src="./images/taxi-service.jpg"
                   alt="Car"
                   width="360"
@@ -462,6 +498,10 @@
             <li class="portfolio-element">
               <div class="overlay">
                 <img
+                  srcset="
+                    ./images/screen-illustrations.jpg    1x,
+                    ./images/screen-illustrations@2x.jpg 2x
+                  "
                   src="./images/screen-illustrations.jpg"
                   alt="Phone Wallpaper"
                   width="360"
@@ -481,6 +521,10 @@
             <li class="portfolio-element">
               <div class="overlay">
                 <img
+                  srcset="
+                    ./images/online-courses.jpg    1x,
+                    ./images/online-courses@2x.jpg 2x
+                  "
                   src="./images/online-courses.jpg"
                   alt="Women with phone"
                   width="360"
@@ -587,7 +631,7 @@
     </footer>
     <!-- #endregion Footer -->
     <!-- #region Modal Window -->
-    <div class="modal-overlay is-open">
+    <div class="modal-overlay">
       <div class="modal">
         <button type="button" class="modal-close-btn">
           <svg width="8" height="8" class="modal-close-icon">
@@ -674,6 +718,43 @@
           </div>
           <button type="submit" class="modal-send-btn">Send</button>
         </form>
+      </div>
+    </div>
+    <div class="modal-overlay-menu">
+      <div class="modal-menu">
+        <button type="button" class="modal-close-btn">
+          <svg class="modal-close-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <nav class="nav">
+          <ul class="menu">
+            <li class="menu-element">
+              <a href="./index.html" class="link">Studio</a>
+            </li>
+            <li class="menu-element">
+              <a href="" class="link">Portfolio</a>
+            </li>
+            <li class="menu-element"><a href="" class="link">Contacts</a></li>
+          </ul>
+        </nav>
+        <address class="address">
+          <ul class="address-list">
+            <li>
+              <a
+                href="mailto:info@devstudio.com"
+                target="_blank"
+                class="contact"
+                >info@devstudio.com</a
+              >
+            </li>
+            <li>
+              <a href="tel:+110001111111" target="_blank" class="contact"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+          </ul>
+        </address>
       </div>
     </div>
     <!-- #endregion Modal Window -->

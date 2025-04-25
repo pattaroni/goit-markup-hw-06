@@ -29,7 +29,6 @@ ul {
 img {
     display: block;
     min-width: 100%;
-    object-fit: cover;
 }
 input, textarea, button {
     font-family: inherit;
@@ -45,7 +44,244 @@ body {
 }
 .container {
     margin: 0 auto;
-    width: 1158px;
+    min-width: 320px;
+    max-width: 1158px;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+    .container {
+        width: 320px;
+        padding: 0 16px;
+        
+    }
+    .page-header .menu, .page-header .address {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+    }
+    .nav {
+        gap: 149px;
+    }
+    .logo {
+        padding: 16px 0;
+    }
+    .header-menu-btn {
+        border: none;
+        background-color: transparent;
+        padding: 0;
+    }
+    .modal-overlay-menu {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--white);
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .modal-overlay-menu.is-open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+    .modal-menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 24px 24px 40px 16px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .principles, .section-team, .portfolio {
+        padding: 96px 0;
+    }
+    .section-order {
+        padding: 72px 0;
+    }
+    .section-title {
+        font-size: 36px;
+        margin-bottom: 72px;
+    }
+    .principles {
+        padding: 96px 0;
+    }
+    .div-principles {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+    }
+    .header {
+        font-weight: 700;
+        font-size: 36px;
+        text-align: center;
+    }
+    .paragraph {
+        font-weight: 500;
+    }
+    .container .principles-list {
+        flex-direction: column;
+        gap: 72px;
+    }
+    .container .list {
+        flex-direction: column;
+        gap: 72px;
+    }
+    .container .portfolio-list {
+        flex-direction: column;
+        gap: 48px;
+    }
+    .footer {
+        padding: 96px 0;
+    }
+    .footer .container {
+        flex-direction: column;
+    }
+    .footer-form {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .footer .logo {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .logo-div {
+        width: 288px;
+        margin-bottom: 72px;
+    }
+    .social-div {
+        margin: 0 auto;
+        margin-bottom: 72px;
+    }
+    .social-p {
+        text-align: center;
+    }
+    .form-div-footer {
+        width: 288px;
+    }
+    .footer-input {
+        width: 288px;
+    }
+    .footer-form-btn {
+        max-width: 165px;
+        margin: 0 auto;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        width: 768px;
+    }
+}
+@media (min-width: 1158px) {
+    .container {
+        width: 1158px;
+    }
+    .modal-overlay-menu {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+    }
+    .nav {
+        gap: 40px;
+    }
+    .logo {
+        margin-right: 76px;
+        padding: 24px 0;
+    }
+    .header-menu-btn {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+    }
+    .section-order {
+        padding: 188px 0;
+        max-width: 1440px;
+    }
+    .section-title {
+        font-size: 56px;
+        margin-bottom: 48px;
+    }
+    .container .principles-list {
+        gap: 24px;
+    }
+    .header {
+        font-weight: 500;
+        font-size: 20px;
+    }
+    .section-team {
+        padding: 120px 0;
+    }
+    .container .list {
+        gap: 24px;
+    }
+    .container .portfolio-list {
+        flex-wrap: wrap;
+        column-gap: 24px;
+        row-gap: 48px;
+    }
+    .footer {
+        padding: 100px 0;
+    }
+    .form-div-footer {
+        margin-left: 80px; 
+    }
+    .footer-form {
+        flex-direction: row;
+        gap: 24px;
+    }
+    .logo-div {
+        margin-right: 120px;
+    }
+    .text-footer {
+        max-width: 264px;
+    }
+    .footer .logo {
+        display: inline-block;
+    }
+    .footer-input {
+        width: 264px;
+    }
 }
 a {
     text-decoration: none;
@@ -71,11 +307,8 @@ a {
 .nav {
     display: flex;
     align-items: center;
-    gap: 40px;
 }
 .logo {
-    padding: 24px 0;
-    margin-right: 76px;
     font-family: "Raleway", sans-serif;
     color: var(--navy-blue);
     font-weight: 700;
@@ -144,14 +377,17 @@ address {
 
 /* #region Section Order */
 .section-order {
-    max-width: 1440px;
     margin: 0 auto;
-    padding: 188px 0;
     background-color: var(--navy-blue);
     background-image: linear-gradient(to bottom, var(--grey), var(--grey)), url(../images/people-office.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+@media (min-resolution: 192dpi) {
+    .section-order {
+        background-image: linear-gradient(to bottom, var(--grey), var(--grey)), url(../images/people-office@2x.jpg);
+    }
 }
 .section-order .container {
     display: flex;
@@ -159,9 +395,7 @@ address {
 }
 .section-title {
     max-width: 496px;
-    margin-bottom: 48px;
     font-weight: 700;
-    font-size: 56px;
     line-height: 1.07;
     letter-spacing: 0.02em;
     text-align: center;
@@ -209,7 +443,7 @@ address {
 }
 .container .principles-list {
     display: flex;
-    gap: 24px;
+    
 }
 .principles-list .element {
     flex-basis: calc((100% - 72px) / 4);
@@ -226,8 +460,6 @@ address {
 }
 .header {
     margin-bottom: 8px;
-    font-weight: 500;
-    font-size: 20px;
     letter-spacing: 0.02em;
     line-height: 1.2;
     color: #2e2f42;
@@ -242,7 +474,6 @@ address {
 
 /* #region Our Team */
 .section-team {
-    padding: 120px 0;
     background-color: #f4f4fd;
 }
 .team {
@@ -263,7 +494,6 @@ address {
 }
 .container .list {
     display: flex;
-    gap: 24px;
 }
 .container .name {
     padding: 32px 0;
@@ -328,9 +558,6 @@ address {
 }
 .container .portfolio-list {
     display: flex;
-    flex-wrap: wrap;
-    column-gap: 24px;
-    row-gap: 48px;
 }
 .portfolio-element {
     flex-basis: calc((100% - 48px) / 3);
@@ -384,7 +611,7 @@ address {
 
 /* #region Footer */
 .footer {
-    padding: 100px 0;
+
     background-color: var(--navy-blue);
 }
 .footer .container {
@@ -392,8 +619,7 @@ address {
     align-items: baseline;
 }
 .footer .logo {
-    display: inline-block;
-    padding-bottom: 16px;
+    padding: 0 0 16px 0;
 }
 .logo-footer {
     color: var(--cloud);
@@ -402,14 +628,10 @@ address {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--cloud);
-    max-width: 264px;
 }
 .footer-list {
     display: flex;
     gap: 120px;
-}
-.logo-div {
-    margin-right: 120px;
 }
 .social-p {
     font-weight: 500;
@@ -439,18 +661,12 @@ address {
 .social-link-footer:hover, .social-link-footer:focus {
     background-color: var(--green);
 }
-.form-div-footer {
-    margin-left: 80px;
-}
 .footer-form {
     display: flex;
-    flex-direction: row;
-    gap: 24px;
 }
 .footer-input {
     border: 1px solid var(--white);
     border-radius: 4px;
-    width: 264px;
     height: 40px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     background-color: transparent;
@@ -558,21 +774,17 @@ address {
     margin-bottom: 24px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .modal-close-btn:hover, .modal-close-btn:focus {
     background-color: var(--ocean);
     border: none;
 }
-
 .modal-close-icon {
     fill: black;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .modal-close-btn:hover .modal-close-icon, .modal-close-btn:focus .modal-close-icon {
     fill: var(--white);
 }
-
 .modal-paragraph {
     font-weight: 500;
     font-size: 16px;
