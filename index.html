@@ -631,7 +631,7 @@
     </footer>
     <!-- #endregion Footer -->
     <!-- #region Modal Window -->
-    <div class="modal-overlay">
+    <div class="modal-overlay is-open">
       <div class="modal">
         <button type="button" class="modal-close-btn">
           <svg width="8" height="8" class="modal-close-icon">
@@ -707,40 +707,49 @@
               required
             />
             <label for="user-privacy" class="modal-form-label"
-              ><span class="privacy-span">
-                <svg class="privacy-icon" width="10" height="8">
-                  <use
-                    href="./images/icons.svg#icon-checkmark"
-                  ></use></svg></span
-              >I accept the terms and conditions of the
-              <a href="" class="modal-link">Privacy Policy</a></label
+              ><span class="spann"
+                ><span class="privacy-span">
+                  <svg class="privacy-icon" width="10" height="8">
+                    <use
+                      href="./images/icons.svg#icon-checkmark"
+                    ></use></svg></span
+                ><span class="privacy-policy"
+                  >I accept the terms and conditions of the
+                  <a href="" class="modal-link">Privacy Policy</a></span
+                ></span
+              ></label
             >
           </div>
           <button type="submit" class="modal-send-btn">Send</button>
         </form>
       </div>
     </div>
-    <div class="modal-overlay-menu">
+    <!-- #endregion Modal Window -->
+    <!-- #region Modal Menu -->
+    <div class="modal-overlay-menu is-open">
       <div class="modal-menu">
         <button type="button" class="modal-close-btn">
           <svg class="modal-close-icon" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
-        <nav class="nav">
-          <ul class="menu">
-            <li class="menu-element">
-              <a href="./index.html" class="link">Studio</a>
-            </li>
-            <li class="menu-element">
-              <a href="" class="link">Portfolio</a>
-            </li>
-            <li class="menu-element"><a href="" class="link">Contacts</a></li>
-          </ul>
-        </nav>
+        <ul class="menu">
+          <li class="menu-element">
+            <a href="./index.html" class="link">Studio</a>
+          </li>
+          <li class="menu-element">
+            <a href="" class="link">Portfolio</a>
+          </li>
+          <li class="menu-element"><a href="" class="link">Contacts</a></li>
+        </ul>
         <address class="address">
           <ul class="address-list">
-            <li>
+            <li class="address-element">
+              <a href="tel:+110001111111" target="_blank" class="contact"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li class="address-element">
               <a
                 href="mailto:info@devstudio.com"
                 target="_blank"
@@ -748,15 +757,48 @@
                 >info@devstudio.com</a
               >
             </li>
-            <li>
-              <a href="tel:+110001111111" target="_blank" class="contact"
-                >+11 (000) 111-11-11</a
-              >
-            </li>
           </ul>
         </address>
+        <ul class="social-list">
+          <li class="social-element">
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              class="social-link"
+            >
+              <svg class="icon-social" width="24" height="24">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-element">
+            <a href="https://twitter.com/" target="_blank" class="social-link">
+              <svg class="icon-social" width="24" height="24">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-element">
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              class="social-link"
+            >
+              <svg class="icon-social" width="24" height="24">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-element">
+            <a href="https://linkedin.com/" target="_blank" class="social-link">
+              <svg class="icon-social" width="24" height="24">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
-    <!-- #endregion Modal Window -->
+    <!-- #endregion Modal Menu -->
   </body>
 </html>

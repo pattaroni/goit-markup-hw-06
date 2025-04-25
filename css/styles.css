@@ -104,11 +104,41 @@ body {
         left: 0;
         width: 100%;
         height: 100%;
-        padding: 24px 24px 40px 16px;
+        padding: 0 24px 40px 16px;
         display: flex;
         flex-direction: column;
     }
-
+    .menu {
+        margin-top: 72px;
+        margin-bottom: 142px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .link {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.11111;
+    }
+    .menu-element:nth-child(1) .link {
+        color: var(--ocean);
+    }
+    .address-list {
+        flex-direction: column;
+        gap: 24px;
+        margin-bottom: 48px;
+    }
+    .contact {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+    }
+    .address-element:nth-child(1) .contact {
+        color: var(--ocean);
+    }
+    .social-list {
+        gap: 40px;
+    }
     .principles, .section-team, .portfolio {
         padding: 96px 0;
     }
@@ -191,6 +221,15 @@ body {
         max-width: 165px;
         margin: 0 auto;
     }
+    .modal {
+        width: 288px;
+        height: 623px;
+        padding: 72px 16px 24px 16px;
+    }
+    .spann {
+        display: flex;
+        align-items: center;
+    }
 }
 @media (min-width: 768px) {
     .container {
@@ -233,6 +272,39 @@ body {
         clip-path: inset(100%);
         clip: rect(0 0 0 0);
         overflow: hidden;
+    }
+    .link {
+        font-weight: 500;
+        padding: 24px 0;
+        line-height: 1.5;
+    }
+    .menu-element:nth-child(1) .link {
+        position: relative;
+        color: var(--ocean);
+    }
+    .link:hover, .link:focus {
+        color: var(--ocean);
+    }
+    .menu-element:nth-child(1) .link::after {
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        content: "";
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: var(--ocean);
+    }
+    .address-list {
+        gap: 40px;
+    }
+    .contact {
+        padding: 24px 0;
+        line-height: 1.5;
+    }
+    .social-list {
+        justify-content: center;
+        gap: 24px;
     }
     .section-order {
         padding: 188px 0;
@@ -282,6 +354,11 @@ body {
     .footer-input {
         width: 264px;
     }
+    .modal {
+        width: 408px;
+        min-height: 584px;
+        padding: 72px 24px 24px 24px;
+    }
 }
 a {
     text-decoration: none;
@@ -327,44 +404,21 @@ a {
     gap: 40px;
 }
 .link {
-    padding: 24px 0;
     color: var(--navy-blue);
-    line-height: 1.5;
     letter-spacing: 0.02em;
-    font-weight: 500;
     list-style-type: none;
     text-decoration: none;
     font-style: normal;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.menu-element:nth-child(1) .link {
-    position: relative;
-    color: var(--ocean);
-}
-.link:hover, .link:focus {
-    color: var(--ocean);
-}
-.menu-element:nth-child(1) .link::after {
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    content: "";
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    background-color: var(--ocean);
 }
 address {
     font-style: normal;
 }
 .address-list {
     display: flex;
-    gap: 40px;
 }
 .contact {
-    padding: 24px 0;
     color: var(--slate);
-    line-height: 1.5;
     letter-spacing: 0.02em;
     list-style-type: none;
     text-decoration: none;
@@ -518,9 +572,7 @@ address {
 .social-list {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
-    gap: 24px;
 }
 .social-link {
     display: flex;
@@ -744,13 +796,10 @@ address {
     top: 50%;
     left: 50%;
     border-radius: 4px;
-    width: 408px;
-    min-height: 584px;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
     transform: translate(-50%, -50%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background-color: var(--dairy);
-    padding: 72px 24px 24px 24px;
     display: flex;
     flex-direction: column;
 }
@@ -856,6 +905,7 @@ address {
     margin-bottom: 24px;
 }
 .privacy-span {
+    flex-shrink: 0;
     width: 16px;
     height: 16px;
     border: 1px solid var(--navy-blue-modal);
