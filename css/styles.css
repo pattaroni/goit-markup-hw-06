@@ -174,6 +174,9 @@ body {
         flex-direction: column;
         gap: 72px;
     }
+    .name .social-list {
+        justify-content: center;
+    }
     .container .list {
         flex-direction: column;
         gap: 72px;
