@@ -47,11 +47,10 @@ body {
     min-width: 320px;
     max-width: 1158px;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
     .container {
-        width: 320px;
+        max-width: 320px;
         padding: 0 16px;
-        
     }
     .page-header .menu, .page-header .address {
         position: absolute;
@@ -327,6 +326,9 @@ body {
     .team {
         flex-basis: calc((520px - 24px) / 2);
     }
+    .social-list {
+        justify-content: center;
+    }
     .container .portfolio-list {
         flex-wrap: wrap;
         row-gap: 72px;
@@ -472,6 +474,9 @@ body {
     .section-team {
         padding: 120px 0;
     }
+    .social-list {
+        justify-content: center;
+    }
     .container .list {
         gap: 24px;
     }
@@ -588,14 +593,38 @@ address {
 .section-order {
     margin: 0 auto;
     background-color: var(--navy-blue);
-    background-image: linear-gradient(to bottom, var(--grey), var(--grey)), url(../images/people-office.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-@media (min-resolution: 192dpi) {
+@media (max-width: 767px) {
     .section-order {
-        background-image: linear-gradient(to bottom, var(--grey), var(--grey)), url(../images/people-office@2x.jpg);
+        background-image: linear-gradient(to bottom, var(--grey), var(--grey)), url(../images/Mobile/people-office-mob.jpg);
+    }
+}
+@media (min-width: 768px) and (max-width: 1157px) {
+    .section-order {
+        background-image: linear-gradient(to bottom, var(--grey), var(--grey)), url(../images/Tablet/people-office-tab.jpg);
+    }
+}
+@media (min-width: 1158px) {
+    .section-order {
+        background-image: linear-gradient(to bottom, var(--grey), var(--grey)), url(../images/Desktop/people-office-desk.jpg);
+    }
+}
+@media (min-resolution: 192dpi) and (max-width: 767px) {
+    .section-order {
+        background-image: linear-gradient(to bottom, var(--grey), var(--grey)), url(../images/Mobile/people-office-mob@2x.jpg);
+    }
+}
+@media (min-resolution: 192dpi) and (min-width: 768px) and (max-width: 1157px) {
+    .section-order {
+        background-image: linear-gradient(to bottom, var(--grey), var(--grey)), url(../images/Tablet/people-office-tab@2x.jpg);
+    }
+}
+@media (min-resolution: 192dpi) and (min-width: 1158px) {
+    .section-order {
+        background-image: linear-gradient(to bottom, var(--grey), var(--grey)), url(../images/Desktop/people-office-desk@2x.jpg);
     }
 }
 .section-order .container {
@@ -719,7 +748,6 @@ address {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
     gap: 24px;
 }
 .social-link {
@@ -811,6 +839,7 @@ address {
 .footer .container {
     display: flex;
     align-items: baseline;
+    justify-content: space-between;
 }
 .footer .logo {
     padding: 0 0 16px 0;
