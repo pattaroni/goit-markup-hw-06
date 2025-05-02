@@ -28,11 +28,11 @@
           <a href="./index.html" class="logo"
             >Web<span class="logo1">Studio</span></a
           >
-          <label for="menu-toggle" class="header-menu">
+          <button type="button" class="header-menu-btn" data-modal-menu-open>
             <svg class="header-menu-icon" width="24" height="24">
               <use href="./images/icons.svg#icon-menu"></use>
             </svg>
-          </label>
+          </button>
           <ul class="menu">
             <li class="menu-element">
               <a href="./index.html" class="link">Studio</a>
@@ -71,7 +71,9 @@
             Effective Solutions<br />
             for Your Business
           </h1>
-          <label for="modal-toggle" class="button">Order Service</label>
+          <button type="button" class="button" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
       <!-- #endregion Section Order -->
@@ -733,14 +735,13 @@
     </footer>
     <!-- #endregion Footer -->
     <!-- #region Modal Window -->
-    <input type="checkbox" id="modal-toggle" hidden />
-    <div class="modal-overlay">
+    <div class="modal-overlay" data-modal>
       <div class="modal">
-        <label for="modal-toggle" class="modal-close-btn">
-          <svg class="modal-close-icon" width="8" height="8">
+        <button type="button" class="modal-close-btn" data-modal-close>
+          <svg width="8" height="8" class="modal-close-icon">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
-        </label>
+        </button>
         <p class="modal-paragraph">
           Leave your contacts and we will call you back
         </p>
@@ -829,14 +830,13 @@
     </div>
     <!-- #endregion Modal Window -->
     <!-- #region Modal Menu -->
-    <input type="checkbox" id="menu-toggle" hidden />
-    <div class="modal-overlay-menu">
+    <div class="modal-overlay-menu" data-modal-menu>
       <div class="modal-menu">
-        <label for="menu-toggle" class="modal-close-btn">
+        <button type="button" class="modal-close-btn" data-modal-menu-close>
           <svg class="modal-close-icon" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
-        </label>
+        </button>
         <ul class="menu">
           <li class="menu-element">
             <a href="./index.html" class="link">Studio</a>
@@ -904,5 +904,6 @@
       </div>
     </div>
     <!-- #endregion Modal Menu -->
+    <script src="./script/modal.js"></script>
   </body>
 </html>
